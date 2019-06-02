@@ -14,7 +14,7 @@ class Account:
     def __repr__(self):
         return f"{self._number}2"
 
-    def balance(self):
+    def get_balance(self):
         return self._amount
 
     def number(self):

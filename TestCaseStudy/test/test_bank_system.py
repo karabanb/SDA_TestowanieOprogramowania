@@ -19,7 +19,7 @@ class TestAcccount(unittest.TestCase):
 
     # Metoda Account.get_owner powinna zwracać Imię  i nazwisko właściciela.
 
-    def test_whenAccountOnerCalled_thenOwnerIsReturned(self):
+    def test_whenAccountOwnerCalled_thenOwnerIsReturned(self):
         # Given
         owner = "Bartlomiej Karaban"
         account = Account(amount=100, owner=owner)
@@ -30,3 +30,18 @@ class TestAcccount(unittest.TestCase):
         # Then
 
         self.assertEqual(owner, owner_recieved)
+
+    # Metoda Account.get_balance powinna zwracać aktualny stan konta.
+
+    def test_whenAccountBallanceCalled_thenActualBalanceReturned(self):
+        # Given
+        balance = 10
+        account = Account(amount=balance, owner='xxx')
+
+        # When
+        balance_recieved = account.get_balance()
+
+        # Then
+
+        self.assertEqual(balance, balance_recieved)
+
