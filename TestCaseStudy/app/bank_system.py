@@ -20,7 +20,7 @@ class Account:
     def number(self):
         return self._number
 
-    def owner(self):
+    def get_owner(self):
         return self._owner
 
 
@@ -31,7 +31,7 @@ class Card:
         self._pin = pin
 
     def __repr__(self):
-        return self._account.owner()
+        return self._account.get_owner()
 
     def get_account(self):
         return self._account
