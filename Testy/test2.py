@@ -1,11 +1,12 @@
 import unittest
 
-from TestSuite.test1 import TestForSuite
+from Testy.test1 import TestForSuite
 
 
 def suite():
     suite = unittest.TestSuite()
-    suite.addTest(TestForSuite)
+    suite.addTest(TestForSuite('test_for_suite'))
+    suite.addTest(TestForSuite('test_for_suite_new'))
     return suite
 
 
